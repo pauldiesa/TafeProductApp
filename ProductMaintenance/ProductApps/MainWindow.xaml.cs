@@ -20,6 +20,7 @@ namespace ProductApps
     /// </summary>
     public partial class MainWindow : Window
     {
+        decimal gstcharge = 1.1m;
         decimal wrapCharge = 25.00m;
         decimal delivarycharge = 5.00m;
         Product cProduct;
@@ -38,6 +39,7 @@ namespace ProductApps
                 totalPaymentTextBlock.Text = Convert.ToString(cProduct.TotalPayment);
                 totalDelivaryChargetextBlock.Text = Convert.ToString(cProduct.TotalPayment +delivarycharge);
                 TotaleWrapchargeTextBlock.Text = Convert.ToString(cProduct.TotalPayment +delivarycharge +wrapCharge);
+                gstTextBlock.Text = Convert.ToString(cProduct.TotalPayment + delivarycharge + wrapCharge +gstcharge);
 
             }
             catch (FormatException)
